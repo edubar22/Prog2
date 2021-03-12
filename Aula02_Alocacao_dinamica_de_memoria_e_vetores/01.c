@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void PrintArray(int *array, int N);
+void PrintArray(int *array, int N){
+    printf("[");
+    for (int i = 0; i < N; ++i) {
+        printf(" %d", array[i]);
+    }
+    printf(" ]\n");
+}
 
 int main() {
     int n, par = 0, impar = 0;
@@ -41,12 +47,4 @@ int main() {
     free(v);
     free(vpar);
     free(vimpar);
-}
-
-void PrintArray(int *array, int N) {
-    printf("[");
-    for (int i = 0; i < N; ++i) {
-        printf(" %d", array[i]);
-    }
-    printf(" ]\n");
 }
